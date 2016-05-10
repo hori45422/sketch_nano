@@ -13,6 +13,10 @@ $(function () {
   context2d.fillStyle = '#FFF';
   context2d.fillRect(0, 0, width, height);
 
+  context2d.strokeStyle="red";
+
+  $(kesu).on("click",function(){context2d.clearRect(0, 0, 640, 480)})
+
   // マウスを押し始めた時
   $canvas.mousedown(function (e) {
     var x = e.originalEvent.layerX; // 行き先
@@ -21,6 +25,12 @@ $(function () {
     context2d.beginPath();
     context2d.moveTo(x, y);
     isDrawing = true;
+
+    context2d.lineWidth=$("#pen-hutosa").val();
+    context2d.strokeStyle=$("#pen-iro").val();
+
+
+
   });
 
   // マウスを動かしているあいだ中
@@ -36,6 +46,8 @@ $(function () {
   // マウスを離した時
   $canvas.mouseup(function (e) {
     isDrawing = false;
+
+
   });
 
   // マウスがキャンバスの外に出た時時
