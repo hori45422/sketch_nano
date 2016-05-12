@@ -1,6 +1,7 @@
 <h1>ダッシュボード</h1>
 <p><a href="/draw">お絵かきする</a></p>
-
+<a href="/dashboard?adult=1">R-18絵を表示するページのリンク<a>
+<a href="/dashboard?adult=0">普通のページのリンク<a>
 <% posts.each do |post| %>
   <div class="post">
     <h2>
@@ -10,7 +11,7 @@
     <img src="/uploads/<%= post["src"] %>" alt="<%= post["title"] %>">
     </p>
     <p>
-    💖 
+    💖
     <button class="like" data-id="<%= post["id"] %>">
       <%= post["likes"] %>
     </button>

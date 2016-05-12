@@ -59,10 +59,16 @@ $(function () {
   $('button.save').click(function (e) {
     var dataUrl = canvas.toDataURL();
     var title = $('.drawbox input[name=title]').val();
+    var adult = 0;
+
+    if($('#adult').prop('checked')){
+      adult = 1;
+    }
 
     $.post('/draw', {
       src: dataUrl,
-      title: title
+      title: title,
+      adult: adult
     }, function (result) {
       alert('保存しました！');
       // 画面を真っ白にする
