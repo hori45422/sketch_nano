@@ -5,6 +5,15 @@ $(function () {
     var $clicked = $(this);
     var dataId   = $clicked.data('id');
     var likes    = $clicked.text();
-    $clicked.text(parseInt(likes, 10) + 1);
+    $.post(
+    "/api/like",{"id":dataId} ,function(data){
+    //成功した時に書くこ
+    $.get(
+      "/api/like",{"id":dataId} ,function(data){
+          $clicked.text(data[0]['likes']);
+      }
+    )
+
+  　});
   });
 });

@@ -51,4 +51,12 @@ post '/draw' do
 end
 
 get '/api/like' do
+  posts = db.execute("SELECT * FROM pictures where id = #{params['id']}" )
+  json posts
+end
+
+post '/api/like' do
+   sql = "UPDATE pictures SET likes = likes +1 WHERE id = #{params['id']}"
+   db.execute_batch(sql)
+
 end
