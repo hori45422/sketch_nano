@@ -1,12 +1,18 @@
 <div class="drawbox">
-  <h1>お絵かき画面</h1>
+  <h1>Draw</h1>
   <p><canvas id="draw_canvas" width="640px" height="480px"></canvas></p>
-  <p><input type="text" name="title" placeholder="絵のタイトル"></input></p>
-  <button class="save">保存する</button>
+  <form class="pure-form">
+<div class="pure-g pure-form rokurokucenter" >
+    <fieldset>
+    <input type="text" name="title"  placeholder="Title" class="pure-input-rounded">
+    <button type="submit" class="pure-button save">Save</button>
+    </fieldset>
+</div>
+  </form>
   <input type="range" id="pen-hutosa">
   <input type="color" id="pen-iro">
-  <input type="button" value="消す" id="kesu">
-  <input type="checkbox" id="adult">アダルト
+  <input type="button" value="Clear" id="kesu">
+  <input type="checkbox" id="adult">R-18
 
 
 

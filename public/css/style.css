@@ -1,6 +1,15 @@
+.header{
+  background-color: #E57373
+}
 body {
-    background: gray;
+    background: white;
     text-align: center;
+  }
+
+.picture {
+    width: 90%;
+    box-shadow:6px 6px 15px 5px #757575 ;
+    border: solid 0px #FFEBEE;
   }
 
 .title  {
@@ -22,6 +31,13 @@ body {
 .tekitou{
   text-align: center;
 }
+.rokurokucenter{
+  margin: auto;
+  text-align:center;
+  align-content: center;
+}
+
 canvas {
     background: #fff;
+    box-shadow:6px 6px 15px 5px #757575 ;
 }
