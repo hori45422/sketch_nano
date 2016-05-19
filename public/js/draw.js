@@ -70,10 +70,11 @@ $(function () {
       title: title,
       adult: adult
     }, function (result) {
-      alert('保存しました！');
+    window.location.href='/';
       // 画面を真っ白にする
-      context2d.fillStyle = '#FFF';
-      context2d.fillRect(0, 0, width, height);
+      //context2d.fillStyle = '#FFF';
+      //context2d.fillRect(0, 0, width, height);
+
     });
   });
 });

@@ -37,6 +37,22 @@ body {
   align-content: center;
 }
 
+.button-xsmall {
+    font-size: 60%;
+
+}
+
+.drawbox{
+  margin-top: 100px;
+}
+
+.baragumi{
+  letter-spacing: 0.3em;
+  color: #CED8F6;
+  text-align: center;
+  text-shadow: 6px 6px 15px 5px black ;
+}
+
 canvas {
     background: #fff;
     box-shadow:6px 6px 15px 5px #757575 ;

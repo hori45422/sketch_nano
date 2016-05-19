@@ -13,7 +13,7 @@ db.results_as_hash = true
 
 get '/' do
   adult = params['adult']
-  if adult == "0"
+  if adult == "1"
     posts = db.execute("SELECT * FROM pictures where adult = 1 ORDER BY id DESC")
   else
     posts = db.execute("SELECT * FROM pictures ORDER BY id DESC")
@@ -23,7 +23,7 @@ end
 
 get '/dashboard' do
   adult = params['adult']
-  if adult == "0"
+  if adult == "1"
     posts = db.execute("SELECT * FROM pictures where adult = 1 ORDER BY id DESC")
   else
     posts = db.execute("SELECT * FROM pictures ORDER BY id DESC")
@@ -63,7 +63,7 @@ get '/api/like' do
 end
 
 post '/api/like' do
-   sql = "UPDATE pictures SET likes = likes +1 WHERE id = :tokyokouka}"
+   sql = "UPDATE pictures SET likes = likes +1 WHERE id = :tokyokouka"
    db.execute_batch(sql,tokyokouka:params['id'])
 
 end

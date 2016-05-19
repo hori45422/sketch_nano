@@ -15,6 +15,17 @@
     <link rel="stylesheet" href="/css/forms-min.css">
   </head>
   <body>
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="">Sketch nano</a>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="/draw" class="pure-menu-link">お絵かきする</a></li>
+                <li class="pure-menu-item"><a href="/dashboard?adult=1" class="pure-menu-link">R-18</a></li>
+                <li class="pure-menu-item"><a href="/dashboard?adult=0" class="pure-menu-link">普通</a></li>
+            </ul>
+        </div>
+    </div>
     <%= yield %>
   </body>
 </html>
